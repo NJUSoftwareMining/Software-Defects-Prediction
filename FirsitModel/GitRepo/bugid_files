@@ -1,0 +1,437 @@
+420116
+ .../jdt/ui/tests/quickfix/QuickFixTest18.java      | 236 ++++++++++++++++++++-
+
+418692
+ .../ExtractMethodTests/error_in/A_test804.java     | 13 +++++++++++
+ .../ExtractMethodTests/error_out/A_test800.java    |  2 +-
+ .../ExtractMethodTests/error_out/A_test804.java    | 17 ++++++++++++++
+ .../ExtractMethodTests/nested_out/A_test652.java   |  2 +-
+ .../ui/tests/refactoring/ExtractMethodTests.java   |  4 ++++
+ .../refactoring/code/ExtractMethodRefactoring.java |  4 ++--
+ .../corext/refactoring/code/SnippetFinder.java     | 27 +++++++++++-----------
+
+416935
+ .../internal/junit/buildpath/BuildPathSupport.java | 31 +++++++++++++---------
+
+416914
+
+414084
+ .../internal/ui/text/correction/ModifierCorrectionSubProcessor.java | 2 +-
+
+413583
+ .../ui/text/correction/CorrectionMessages.java     |  2 -
+ .../ui/text/correction/IProposalRelevance.java     |  1 -
+ .../correction/UnresolvedElementsSubProcessor.java | 82 +---------------------
+
+412139
+ .../eclipse/jdt/internal/ui/JavaUIMessages.java    |  3 +-
+ .../internal/ui/viewsupport/JavaElementLinks.java  | 39 +++++++++++++++++++---
+
+411841
+ .../jdt/internal/junit/model/TestRunSession.java   | 36 +-----------
+ .../jdt/internal/junit/ui/TestRunnerViewPart.java  | 64 +++++++++++++++-------
+
+411794
+ .../jdt/internal/junit/ui/FailureTrace.java        | 35 +++++++++++++++++++++-
+ .../jdt/internal/junit/ui/TestRunnerViewPart.java  |  6 +++-
+
+411636
+ .../tests/packageview/ContentProviderTests6.java   | 22 ++++++++++++++++++++++
+ .../PackageExplorerContentProvider.java            |  8 +++++---
+
+411588
+ .../quickfix/ConvertIterableLoopQuickFixTest.java  | 68 +++++++++++++++++++++-
+ .../corext/fix/ConvertIterableLoopOperation.java   | 14 ++---
+
+411585
+ .../org/eclipse/jdt/internal/ui/search/JavaElementLine.java | 13 +++++++++----
+ .../internal/ui/search/OccurrencesSearchLabelProvider.java  |  8 ++++----
+ .../jdt/internal/ui/search/OccurrencesSearchResultPage.java |  5 ++---
+
+410989
+ .../org/eclipse/jdt/ui/tests/core/CoreTests.java   |   1 +
+ .../jdt/ui/tests/core/ImportOrganizeTest.java      |  10 +-
+ .../jdt/ui/tests/core/ImportOrganizeTest18.java    | 300 +++++++++++++++++++++
+ .../jdt/ui/tests/core/NoSuperTestsSuite.java       |  62 +++++
+
+410570
+
+410371
+ .../codemanipulation/ContextSensitiveImportRewriteContext.java      | 4 ++--
+ .../corext/refactoring/structure/ChangeTypeRefactoring.java         | 6 ++++--
+
+410173
+ .../eclipse/jdt/testplugin/JavaProjectHelper.java  |  33 ++++++
+ .../jdt/ui/tests/core/Java18ProjectTestSetup.java  |  62 +++++++++++
+ .../ui/tests/quickfix/AssistQuickFixTest18.java    | 113 +++++++++++++++++++++
+ .../jdt/ui/tests/quickfix/QuickFixTest.java        |   7 +-
+ .../ui/text/correction/QuickAssistProcessor.java   |   7 ++
+
+410170
+ .../jdt/ui/tests/quickfix/QuickFixTest18.java      | 61 ++++++++++++++++++++++
+ .../correction/ModifierCorrectionSubProcessor.java |  3 ++
+ .../ui/text/correction/QuickFixProcessor.java      |  2 +
+
+410077
+
+410056
+ .../MoveInstanceMethod/canMove/test18_1/in/A.java  |  6 +++
+ .../MoveInstanceMethod/canMove/test18_1/in/B.java  |  3 ++
+ .../MoveInstanceMethod/canMove/test18_1/out/A.java |  3 ++
+ .../MoveInstanceMethod/canMove/test18_1/out/B.java |  7 +++
+ .../MoveInstanceMethod/canMove/test18_2/in/A.java  |  6 +++
+ .../MoveInstanceMethod/canMove/test18_2/in/B.java  |  3 ++
+ .../MoveInstanceMethod/canMove/test18_2/out/A.java |  3 ++
+ .../MoveInstanceMethod/canMove/test18_2/out/B.java |  7 +++
+ .../MoveInstanceMethod/canMove/test18_3/in/A.java  | 23 +++++++++
+ .../MoveInstanceMethod/canMove/test18_3/in/B.java  |  5 ++
+ .../MoveInstanceMethod/canMove/test18_3/out/A.java | 12 +++++
+ .../MoveInstanceMethod/canMove/test18_3/out/B.java | 17 +++++++
+ .../MoveInstanceMethod/canMove/test18_4/in/A.java  | 23 +++++++++
+ .../MoveInstanceMethod/canMove/test18_4/in/B.java  |  5 ++
+ .../MoveInstanceMethod/canMove/test18_4/out/A.java | 12 +++++
+ .../MoveInstanceMethod/canMove/test18_4/out/B.java | 17 +++++++
+ .../ui/tests/refactoring/AllRefactoringTests.java  |  1 +
+ .../tests/refactoring/MoveInstanceMethodTests.java |  3 +-
+ .../refactoring/MoveInstanceMethodTests18.java     | 59 ++++++++++++++++++++++
+ .../refactoring/RefactoringAvailabilityTester.java |  3 +-
+ .../structure/MoveInstanceMethodProcessor.java     | 28 +++++++---
+
+409906
+ .../resources/MoveMembers/test18_1/in/A.java       |  5 +++++
+ .../resources/MoveMembers/test18_1/in/B.java       |  3 +++
+ .../resources/MoveMembers/test18_1/out/A.java      |  4 ++++
+ .../resources/MoveMembers/test18_1/out/B.java      |  5 +++++
+ .../resources/MoveMembers/test18_2/in/A.java       |  5 +++++
+ .../resources/MoveMembers/test18_2/in/B.java       |  3 +++
+ .../resources/MoveMembers/test18_2/out/A.java      |  4 ++++
+ .../resources/MoveMembers/test18_2/out/B.java      |  5 +++++
+ .../resources/MoveMembers/test18_3/in/A.java       |  5 +++++
+ .../resources/MoveMembers/test18_3/in/B.java       |  3 +++
+ .../resources/MoveMembers/test18_3/out/A.java      |  4 ++++
+ .../resources/MoveMembers/test18_3/out/B.java      |  5 +++++
+ .../resources/MoveMembers/test63/in/A.java         |  5 -----
+ .../resources/MoveMembers/test63/in/B.java         |  3 ---
+ .../resources/MoveMembers/test63/out/A.java        |  4 ----
+ .../resources/MoveMembers/test63/out/B.java        |  5 -----
+ .../resources/MoveMembers/test64/in/A.java         |  5 -----
+ .../resources/MoveMembers/test64/in/B.java         |  3 ---
+ .../resources/MoveMembers/test64/out/A.java        |  4 ----
+ .../resources/MoveMembers/test64/out/B.java        |  5 -----
+ .../resources/MoveMembers/test65/in/A.java         |  5 -----
+ .../resources/MoveMembers/test65/in/B.java         |  3 ---
+ .../resources/MoveMembers/test65/out/A.java        |  4 ----
+ .../resources/MoveMembers/test65/out/B.java        |  5 -----
+ .../ui/tests/refactoring/MoveMembersTests18.java   |  8 ++++----
+ .../refactoring/RefactoringCoreMessages.java       |  2 ++
+ .../structure/MoveStaticMembersProcessor.java      | 23 +++++++++++++---------
+
+409723
+ .../resources/IntroduceIndirection/test18_01/out/Foo.java               | 2 +-
+ .../resources/IntroduceIndirection/test18_02/out/Foo.java               | 2 +-
+ .../resources/IntroduceIndirection/test18_03/out/Foo.java               | 2 +-
+ .../resources/IntroduceIndirection/test18_04/out/Foo.java               | 2 +-
+ .../resources/IntroduceIndirection/test18_05/out/Foo.java               | 2 +-
+
+409719
+ .../jdt/internal/corext/refactoring/TypeContextChecker.java   |  6 +++++-
+ .../refactoring/structure/ChangeSignatureProcessor.java       | 11 +++++++++--
+
+409717
+    attached package-info.java
+ .../eclipse/jdt/internal/ui/viewsupport/JavaElementLinks.java  | 10 ++++++++--
+
+409707
+ .../internal/ui/propertiesfileeditor/PropertiesFileEditor.java   | 9 ++++++++-
+
+409705
+ .../jdt/ui/tests/refactoring/IntroduceIndirectionTests.java        | 7 ++++---
+
+409704
+ .../jdt/ui/tests/refactoring/RefactoringTest.java  |  2 +-
+ .../eclipse/jdt/testplugin/JavaProjectHelper.java  | 40 ++++++++++++++++++----
+
+409520
+ .../jdt/ui/tests/quickfix/QuickFixTest18.java      | 198 +++++++++++++++++++++
+ .../corext/codemanipulation/StubUtility2.java      |  10 +-
+
+409275
+
+408979
+ .../jdt/ui/tests/quickfix/QuickFixTest18.java      | 237 ++++++++++++++++++++-
+ .../jdt/internal/corext/dom/ScopeAnalyzer.java     |  16 +-
+ .../internal/ui/text/correction/ASTResolving.java  |  21 ++
+ .../ui/text/correction/ReturnTypeSubProcessor.java |  65 +++---
+ .../MissingReturnTypeCorrectionProposal.java       | 160 ++++++++------
+ ...issingReturnTypeInLambdaCorrectionProposal.java | 104 +++++++++
+
+408966
+ .../canInline18/test0/in/TestInlineLambda.java     | 58 +++++++++++++++
+ .../canInline18/test0/out/TestInlineLambda.java    | 56 +++++++++++++++
+ .../test1/in/TestInlineLambda_Cast.java            | 47 +++++++++++++
+ .../test1/out/TestInlineLambda_Cast.java           | 45 ++++++++++++
+ .../test1000/in/TestInlineMethodRef.java           | 49 +++++++++++++
+ .../test1000/out/TestInlineMethodRef.java          | 47 +++++++++++++
+ .../test1001/in/TestInlineMethodRef_Cast.java      | 50 +++++++++++++
+ .../test1001/out/TestInlineMethodRef_Cast.java     | 48 +++++++++++++
+ .../test1002/in/TestInlineMethodRefArray.java      | 20 ++++++
+ .../test1002/out/TestInlineMethodRefArray.java     | 18 +++++
+ .../test1003/in/TestInlineMethodRef_Ambiguous.java | 51 ++++++++++++++
+ .../out/TestInlineMethodRef_Ambiguous.java         | 50 +++++++++++++
+ .../test2/in/TestInlineLambdaArray.java            | 15 ++++
+ .../test2/out/TestInlineLambdaArray.java           | 14 ++++
+ .../test3/in/TestInlineLambda_Ambiguous.java       | 54 ++++++++++++++
+ .../test3/out/TestInlineLambda_Ambiguous.java      | 52 ++++++++++++++
+ .../test4/in/TestInlineLambda_Ambiguous.java       | 36 ++++++++++
+ .../test4/out/TestInlineLambda_Ambiguous.java      | 34 +++++++++
+ .../test5/in/TestInlineLambda_Cast.java            | 22 ++++++
+ .../test5/out/TestInlineLambda_Cast.java           | 20 ++++++
+ .../InlineTemp/canInline18/A_test0_in.java         | 40 +++++++++++
+ .../InlineTemp/canInline18/A_test0_out.java        | 38 ++++++++++
+ .../InlineTemp/canInline18/A_test1000_in.java      | 44 ++++++++++++
+ .../InlineTemp/canInline18/A_test1000_out.java     | 42 +++++++++++
+ .../InlineTemp/canInline18/A_test1001_in.java      | 44 ++++++++++++
+ .../InlineTemp/canInline18/A_test1001_out.java     | 42 +++++++++++
+ .../InlineTemp/canInline18/A_test1_in.java         | 40 +++++++++++
+ .../InlineTemp/canInline18/A_test1_out.java        | 38 ++++++++++
+ .../InlineTemp/canInline18/A_test2_in.java         | 16 +++++
+ .../InlineTemp/canInline18/A_test2_out.java        | 15 ++++
+ .../ui/tests/refactoring/AllRefactoringTests.java  |  2 +
+ .../tests/refactoring/InlineConstantTests18.java   | 82 ++++++++++++++++++++++
+ .../ui/tests/refactoring/InlineTempTests18.java    | 66 +++++++++++++++++
+ .../eclipse/jdt/internal/corext/dom/ASTNodes.java  | 13 +++-
+
+408937
+ .../resources/RenameTests18/testLambda3/in/A.java            | 12 ++++++++++++
+ .../resources/RenameTests18/testLambda3/out/A.java           | 12 ++++++++++++
+ .../org/eclipse/jdt/ui/tests/refactoring/RenameTests18.java  |  4 ++++
+
+408555
+ .../jdt/ui/tests/refactoring/RefactoringTest.java  |  6 ++++-
+ .../jdt/ui/tests/refactoring/ccp/DeleteTest.java   | 26 +++++++++++-----------
+ .../eclipse/jdt/testplugin/JavaProjectHelper.java  | 19 +++++++++++++++-
+
+408334
+ .../internal/corext/refactoring/structure/CompilationUnitRewrite.java | 4 +++-
+ .../corext/refactoring/structure/PullUpRefactoringProcessor.java      | 4 ----
+
+408330
+ .../eclipse/jdt/internal/ui/infoviews/AbstractInfoView.java  | 12 +++++++-----
+
+408114
+ .../corext/refactoring/code/ExtractTempRefactoring.java    | 14 ++++++--------
+
+408072
+ .../ui/refactoring/nls/search/NLSSearchResultRequestor.java       | 8 +++++++-
+
+408060
+ .../jdt/internal/ui/refactoring/nls/search/NLSSearchQuery.java        | 4 ++--
+
+407985
+ .../lambdaExpression18_in/A_test325.java             | 16 ++++++++++++++++
+ .../lambdaExpression18_out/A_test306.java            |  5 ++++-
+ .../lambdaExpression18_out/A_test317.java            |  4 +++-
+ .../lambdaExpression18_out/A_test325.java            | 20 ++++++++++++++++++++
+ .../ui/tests/refactoring/ExtractMethodTests18.java   |  4 ++++
+ .../refactoring/code/ExtractMethodAnalyzer.java      |  4 +++-
+
+407382
+ .../ui/refactoring/contentassist/CUPositionCompletionProcessor.java   | 4 ++--
+
+407056
+ .../eclipse/jdt/internal/corext/dom/ASTNodes.java  |  21 +--
+ .../fix/PotentialProgrammingProblemsFix.java       |   2 +
+ .../corext/refactoring/code/flow/FlowAnalyzer.java |  10 +-
+ .../ui/actions/CopyQualifiedNameAction.java        |  14 +-
+ .../ui/javaeditor/SemanticHighlightings.java       | 142 ++++++---------------
+ .../internal/ui/text/correction/ASTResolving.java  |  15 +++
+ .../correction/UnresolvedElementsSubProcessor.java |   4 +-
+ .../internal/ui/text/java/hover/JavadocHover.java  |  20 +--
+
+406976
+
+406786
+ .../ExtractMethodTests/defaultMethods18_in/A_test5.java   | 11 +++++++++++
+ .../ExtractMethodTests/defaultMethods18_out/A_test5.java  | 15 +++++++++++++++
+ .../jdt/ui/tests/refactoring/ExtractMethodTests18.java    |  6 +++++-
+ .../corext/refactoring/code/ExtractMethodRefactoring.java |  4 ++--
+
+406274
+ .../in/A.java                                      |  14 +++
+ .../out/A.java                                     |  20 ++++
+ .../out/B.java                                     |  10 ++
+ .../testExtractInterfaceFromClass/in/A.java        |  12 +++
+ .../testExtractInterfaceFromClass/out/A.java       |  15 +++
+ .../testExtractInterfaceFromClass/out/B.java       |   8 ++
+ .../testExtractInterfaceFromInterface1/in/A.java   |  19 ++++
+ .../testExtractInterfaceFromInterface1/out/A.java  |  14 +++
+ .../testExtractInterfaceFromInterface1/out/B.java  |  16 +++
+ .../testExtractInterfaceFromInterface2/in/A.java   |  24 +++++
+ .../testExtractInterfaceFromInterface2/in/I1.java  |   6 ++
+ .../testExtractInterfaceFromInterface2/in/I2.java  |   6 ++
+ .../testExtractInterfaceFromInterface2/out/A.java  |  19 ++++
+ .../testExtractInterfaceFromInterface2/out/B.java  |  16 +++
+ .../testExtractInterfaceFromInterface2/out/I1.java |   6 ++
+ .../testExtractInterfaceFromInterface2/out/I2.java |   6 ++
+ .../ui/tests/refactoring/AllRefactoringTests.java  |   1 +
+ .../tests/refactoring/ExtractInterfaceTests.java   |  11 +-
+ .../tests/refactoring/ExtractInterfaceTests18.java | 115 +++++++++++++++++++++
+ .../structure/ExtractInterfaceProcessor.java       |  18 ++--
+
+405704
+
+405086
+ .../quickfix/NullAnnotationsQuickFixTest.java      | 622 ++++++++++++++++++++-
+ .../jdt/internal/corext/fix/FixMessages.java       |   5 +-
+ .../internal/corext/fix/NullAnnotationsFix.java    |  60 +-
+ .../fix/NullAnnotationsRewriteOperations.java      | 137 +++--
+ .../NullAnnotationsCorrectionProcessor.java        |  16 +-
+ .../ui/text/correction/QuickFixProcessor.java      |  36 +-
+
+403927
+ .../eclipse/jdt/internal/corext/dom/ASTNodes.java  |   12 +-
+ .../jdt/internal/corext/dom/GenericVisitor.java    | 1044 +++++++++-----------
+
+403924
+ .../eclipse/jdt/internal/corext/dom/ASTNodes.java  | 72 ++++++++++++++++++----
+ .../text/correction/JavadocTagsSubProcessor.java   |  5 +-
+ .../correction/LocalCorrectionsSubProcessor.java   |  3 +-
+ .../proposals/ChangeMethodSignatureProposal.java   |  2 +-
+
+403923
+ .../refactoring/structure/ChangeSignatureProcessor.java      |  6 +++---
+ .../corext/refactoring/structure/HierarchyProcessor.java     |  6 +++---
+ .../internal/ui/text/correction/QuickAssistProcessor.java    |  4 ++--
+ .../correction/proposals/ChangeMethodSignatureProposal.java  |  4 ++--
+ .../correction/proposals/TypeChangeCorrectionProposal.java   | 12 ++++++------
+
+403749
+ .../org/eclipse/jdt/internal/corext/fix/LambdaExpressionsFix.java       | 2 +-
+
+401666
+ .../ui/preferences/formatter/BracesTabPage.java      |  9 +++++++++
+ .../ui/preferences/formatter/FormatterMessages.java  | 11 ++++++++++-
+ .../ui/preferences/formatter/WhiteSpaceOptions.java  | 20 +++++++++++++++++++-
+
+401418
+ .../eclipse/jdt/ui/tests/quickfix/CleanUpTest.java | 92 +++++++++++++++++++++-
+
+401120
+
+400668
+ .../quickfix/NullAnnotationsQuickFixTest.java      | 622 ++++++++++++++++++++-
+ .../jdt/internal/corext/fix/FixMessages.java       |   5 +-
+ .../internal/corext/fix/NullAnnotationsFix.java    |  60 +-
+ .../fix/NullAnnotationsRewriteOperations.java      | 137 +++--
+ .../NullAnnotationsCorrectionProcessor.java        |  16 +-
+ .../ui/text/correction/QuickFixProcessor.java      |  36 +-
+
+398995
+ .../quickfix/NullAnnotationsQuickFixTest.java      | 514 ++++++++++++++++++++-
+ .../jdt/internal/corext/fix/FixMessages.java       |   5 +
+ .../internal/corext/fix/NullAnnotationsFix.java    |   7 +-
+ .../internal/ui/fix/NullAnnotationsCleanUp.java    |   6 +-
+ .../NullAnnotationsCorrectionProcessor.java        |  58 ++-
+ .../ui/text/correction/QuickFixProcessor.java      |  11 +-
+ .../ExtractToNullCheckedLocalProposal.java         | 345 ++++++++++++++
+
+398965
+ .../eclipse/jdt/internal/ui/preferences/PreferencesMessages.java   | 1 +
+ .../ui/preferences/ProblemSeveritiesConfigurationBlock.java        | 7 +++++++
+
+398211
+ .../eclipse/jdt/ui/tests/quickfix/NullAnnotationsQuickFixTest.java  | 6 +++---
+
+398112
+ .../jdt/internal/ui/javaeditor/CompilationUnitDocumentProvider.java     | 2 +-
+
+398076
+ .../tests/packageview/ContentProviderTests6.java   | 224 +++++++++++++++++++++
+ .../ui/tests/packageview/PackageExplorerTests.java |   3 +-
+
+397467
+ .../ui/viewsupport/JavaElementLabelComposer.java   |  4 +--
+ .../internal/ui/viewsupport/JavaElementLinks.java  | 38 +++++++++++++++++++++-
+
+397465
+ .../jdt/internal/ui/infoviews/JavadocView.java     |  5 +-
+ .../internal/ui/text/java/hover/JavadocHover.java  | 44 ++++++++++++++-
+ .../ui/org/eclipse/jdt/ui/actions/OpenAction.java  | 65 ++++++++++++++++++----
+
+397464
+ .../ui/text/javadoc/JavadocContentAccess2.java     | 277 +++++++++++----------
+ .../internal/ui/viewsupport/JavaElementLinks.java  | 100 +++++++-
+
+397447
+ .../org/eclipse/jdt/internal/corext/javadoc/JavaDocLocations.java     | 4 ++--
+
+396823
+ .../ui/org/eclipse/jdt/internal/ui/infoviews/JavadocView.java           | 2 +-
+
+396809
+ .../org/eclipse/jdt/ui/tests/AutomatedSuite.java   |   4 +-
+ .../ui/tests/packageHover/PackageJavadocTests.java | 301 +++++++++++++++++++++
+ .../internal/ui/text/java/hover/JavadocHover.java  |   2 +-
+
+396808
+ .../internal/ui/text/java/hover/JavadocHover.java  | 55 +++++++++++++++++-----
+
+396087
+
+395962
+
+395007
+ org.eclipse.jdt.ui/ui/org/eclipse/jdt/ui/actions/RefreshAction.java | 6 ++----
+
+393932
+ .../constraints/SuperTypeRefactoringProcessor.java | 25 ++++++++++++----------
+
+393147
+ .../ui/tests/quickfix/AdvancedQuickAssistTest.java |  46 +++++
+ .../correction/AdvancedQuickAssistProcessor.java   | 188 +++++++++++----------
+
+392946
+ .../quickfix/LocalCorrectionsQuickFixTest.java     | 135 ++++++++++++++++++++-
+ .../jdt/internal/corext/fix/FixMessages.java       |   3 +-
+ .../jdt/internal/corext/fix/UnusedCodeFix.java     |  47 ++++++-
+ .../ui/text/correction/CorrectionMessages.java     |   3 +-
+ .../text/correction/JavadocTagsSubProcessor.java   |  22 ++--
+ .../correction/LocalCorrectionsSubProcessor.java   |  11 +-
+ .../ui/text/correction/QuickFixProcessor.java      |   6 +-
+
+392931
+ .../corext/codemanipulation/StubUtility2.java      | 15 ++++++++----
+ .../NameConventionConfigurationBlock.java          | 27 +++++++++++++++++++++-
+ .../ui/preferences/PreferencesMessages.java        |  1 +
+ .../ProblemSeveritiesConfigurationBlock.java       |  4 ----
+
+392847
+ .../ui/tests/quickfix/AdvancedQuickAssistTest.java | 27 ++++++++++++++++++++
+ .../correction/AdvancedQuickAssistProcessor.java   | 29 +++++++++++-----------
+
+391927
+ .../tests/refactoring/ExtractSupertypeTests.java   |   61 +-
+ .../jdt/ui/tests/refactoring/MoveMembersTests.java |  238 +-
+ .../jdt/ui/tests/refactoring/PullUpTests.java      |  876 +++---
+ .../jdt/ui/tests/refactoring/PushDownTests.java    |  721 +++--
+ .../jdt/ui/tests/refactoring/RefactoringTest.java  |   14 +-
+ .../refactoring/RenameNonPrivateFieldTests.java    |   51 +-
+ .../ui/tests/refactoring/RenamePackageTests.java   |   34 +-
+ .../refactoring/RenameResourceChangeTests.java     |  200 +-
+ .../refactoring/RenameSourceFolderChangeTests.java |    4 +-
+ .../tests/refactoring/RenameStaticMethodTests.java |   95 +-
+ .../tests/refactoring/RippleMethodFinderTests.java |   60 +-
+ .../ccp/CopyResourcesToClipboardActionTest.java    |   29 +-
+ .../jdt/ui/tests/refactoring/ccp/CopyTest.java     | 2837 +++++++-------------
+ .../refactoring/ccp/CopyToClipboardActionTest.java |   37 +-
+ .../jdt/ui/tests/refactoring/ccp/DeleteTest.java   |  100 +-
+ .../jdt/ui/tests/refactoring/ccp/MoveTest.java     | 1600 ++++-------
+ .../ui/tests/refactoring/ccp/MultiMoveTest.java    |  494 ++--
+ .../ui/tests/refactoring/ccp/PasteActionTest.java  |  213 +-
+ .../extensions/ExtensionPointTests.java            |    7 +-
+ .../eclipse/jdt/testplugin/JavaProjectHelper.java  |   14 +-
+
+391520
+ .../eclipse/jdt/internal/ui/preferences/PreferencesMessages.java    | 1 +
+ .../ui/preferences/ProblemSeveritiesConfigurationBlock.java         | 6 +++++-
+
