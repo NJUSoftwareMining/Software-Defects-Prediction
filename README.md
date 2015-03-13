@@ -1,5 +1,5 @@
 # Software-Defects-Prediction
-Software Defects Prediction Based on Machine Learning,
+Software Defects Prediction Based on Machine Learning
 A National Undergraduate Scientific Innovation Project
 Advisor: Ming Li,Associate Professor,LAMDA Group.
 
